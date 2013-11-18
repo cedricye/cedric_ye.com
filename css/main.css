@@ -1,0 +1,46 @@
+*{
+	margin: 0; padding: 0;
+}
+.ground{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.ground-pic{
+	display: block;
+	position: relative;
+}
+
+.wrapper{
+	position: relative;
+	z-index: 2;
+	width: 40%;
+	margin: 10% auto 0 auto;
+	/*border:1px solid gray;*/
+	/*border-radius: 50%;*/
+}
+.photo-pic{
+	width: 20%;
+	border-radius: 50%;
+	opacity: .9;
+	box-shadow: 0 0 4px white;
+}
+
+.intro{
+	margin-top: 20px;
+	background-color: rgba(255, 255, 255 , .7);
+	height: 40%;
+	width: 80%;
+	padding: 20px 10px;
+	border-radius: 4px;
+	color: #5D5A5A;
+}
+
+.p2{
+	margin-left: 50px;
+	font-size: .9em;
+	margin-top: 10px;
+}
