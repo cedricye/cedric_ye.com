@@ -1,8 +1,11 @@
+---
+---
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Simple</title>
+	<title>Hi,Cedric</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href='http://fonts.googleapis.com/css?family=Gentium+Basic' rel='stylesheet' type='text/css'>
 	<meta charset="UTF-8">
 </head>
 <body>
@@ -14,78 +17,17 @@
 	<div class="wrapper">
 		<img src="img/photo.jpg" class="photo-pic">
 		<div class="intro">
-			<p class="p1">Being a pure, simple person.</p>
-			<p class="p2">In oneself, lies the whole world.</p>
+			<p class="p1">In onself, lies the whole world.</p>
+			<p class="p2"><i><a href="http://en.wikipedia.org/wiki/Jiddu_Krishnamurti">--Jiddu Krishnamurti</a></i></p>
+			<p class="p3">自己的网站，在上面随便搞感兴趣的技术，<br>写写这些事，那些人~</p>
 		</div>
-	</div>
-	<!-- 900 * 140-->
-		<!-- <div class='fade'><div class='box'></div></div>
-
-		<div class='container'>
-			
-			<div class='content'>
-
-				<span id="left_day"></span>
-				<span id="left_second"></span>
+		<div class="last-post">
+				{% assign lastPost = site.posts.first %}
+				<p>最新文章：
+				<a href="{{ lastPost.url }}">{{ lastPost.title }}</a></p>
 			</div>
-		</div>
-		
-		<footer></footer> -->
-	</body>
-	<script type="text/javascript">
+	</div>
 
-	var ONE_SECOND = 1000;
-	var ONE_DAY = 60 * 60 * 24;
-	var timer;
-
-	function dayCountDown () {
-		var currentDate = new Date();
-		var deadDate = new Date('2073', '9', '15');
-		var leftSecond = parseInt((deadDate - currentDate) / ONE_SECOND);
-		var leftDay = parseInt(leftSecond / ONE_DAY);
-
-		var leftDaySpan = document.getElementById("left_day");
-		var leftSecondSpan = document.getElementById("left_second");
-
-		leftSecondSpan.innerHTML = leftSecond;
-		leftDaySpan.innerHTML = leftDay;
-
-	}
-
-		//timer = setInterval(dayCountDown, 1000);
-		function init () {
-			var WIDTH = window.innerWidth,
-			HEIGHT = window.innerHeight,
-			groundpic = document.getElementById("groundpic"),
-			ground = document.getElementById("ground");
-
-			ground.style.width = WIDTH + "px";
-			ground.style.height = HEIGHT + "px";
-
-			groundpic.style.width = WIDTH + 410 + "px";
-			groundpic.style.left = -(140 / 1776) * (WIDTH + 410) + "px";
-		}
-
-		function registerMouseMoveEvent () {
-			var WIDTH = window.innerWidth,			
-			groundpic = document.getElementById("groundpic"),
-			LEFT = parseInt(groundpic.style.left || groundpic.offsetLeft);
-
-			document.body.addEventListener("mousemove", function (event) {
-				var currentX = event.clientX,
-				left;
-
-				if(currentX >= WIDTH / 2){
-					left = LEFT - (currentX - WIDTH / 2) * ((2 * 188) / WIDTH);
-				}else{
-					left = LEFT + (WIDTH / 2 - currentX) * ((2 * 140) / WIDTH);
-				}
-
-				groundpic.style.left = left + "px";
-				console.log(currentX);
-			})
-		}
-		init();
-		registerMouseMoveEvent();
-		</script>
-		</html>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
