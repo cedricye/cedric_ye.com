@@ -3,31 +3,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hi ^ ^</title>
+	<title>Cedric's blog</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link href='http://fonts.googleapis.com/css?family=Gentium+Basic' rel='stylesheet' type='text/css'>
 	<meta charset="UTF-8">
 </head>
 <body>
-	<!-- 1124 * 660 -->
-	<div class="ground" id="ground">
-		<img src="img/body.jpg" id="groundpic" class="ground-pic">
-	</div>
-
 	<div class="wrapper">
+		{% assign post = site.posts.first %}
+		{% assign title = post.title %}
 		<img src="img/photo.jpg" class="photo-pic">
-		<div class="intro">
-			<p class="p1">In onself, lies the whole world.</p>
-			<p class="p2"><i><a href="http://en.wikipedia.org/wiki/Jiddu_Krishnamurti">--Jiddu Krishnamurti</a></i></p>
-			<p class="p3">自己的网站，在上面随便搞感兴趣的技术，<br>写写这些事，那些人~</p>
-		</div>
-		<div class="last-post">
-				{% assign lastPost = site.posts.first %}
-				<p>最新文章：
-				<a href="{{ lastPost.url }}">{{ lastPost.title }}</a></p>
+		<div class="box">
+			<h3>笔记</h3>
+			<div class="content">
+				<p><a href="{{post.url}}">{{title}}</a></p>
+				<p class="date">2015/04/18</p>
 			</div>
-	</div>
 
-	<script type="text/javascript" src="js/index.js"></script>
+		</div>
+		<div class="box" style="visibility:hidden">
+			<h3>书籍</h3>
+			<div class="content">
+				<p>关于XXX的记录XXXXXXXXXXXXXXXXXOOOOOOOOOOOOOOOOO</p>
+				<p class="date">2015/04/18</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+			Cedric's Blog.
+		</div>
 </body>
 </html>
